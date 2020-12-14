@@ -1,0 +1,44 @@
+main {
+    background-color: #db524d;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 700px;
+    width: 700px;
+    border-radius: 50%;
+}
+
+#time {
+    font-family: 'Courier Prime', monospace;
+}
+
+.notification p {
+    font-size: 104px;
+}
+
+#start {
+    box-sizing: border-box;
+}
+
+button {
+    width: 150px;
+}
+
+footer {
+    background-color: #db524d;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+}
+
+footer p {
+    text-align: center;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="tomato.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="hero is-fullheight center">
+        <div class="notification center is-flex-direction-column is-justify-content-space-around">
+            <!-- <div class="buttons">
+                <button id="pomodoro" class="button has-text-weight-bold is-size-4 px-6 py-5 mx-3 is-danger is-light timers">Pomodoro</button>
+                <button id="shortBreak" class="button has-text-weight-bold is-size-4 px-6 py-5 mx-3 is-danger is-light timers">Break 5mn</button>
+                <button id="longBreak" class="button has-text-weight-bold is-size-4 px-6 py-5 ml-3 is-danger is-light timers">Break 15mn</button>
+            </div> -->
+            <p id="time" class="has-text-weight-bold has-text-centered has-text-light">25:00</p>
+            <p id="text" class="has-text-centered has-text-light is-size-2">Time to work !</p>
+            <div class="center buttons">
+                <button id="start"
+                    class="button is-danger has-text-weight-bold is-size-3 is-light px-6 py-5">START</button>
+                <button id="reset"
+                    class="button is-danger has-text-weight-bold is-size-3 is-light px-6 py-5">RESET</button>
+            </div>
+        </div>
+        <footer>
+            <p>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel
+                perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
