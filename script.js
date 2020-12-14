@@ -17,12 +17,15 @@ let y = 0
 let x = timeArray[y]
 for (let input of inputs) {
     input.addEventListener('change', (e) => {
-        workingTime = Number(workInput.value)
+        workingTime = Math.ceil(Number(workInput.value))
+        workInput.value = workingTime
         if (workingTime < 10) {
             workingTime = '0' + workingTime
         }
-        shortBreakTime = Number(shortInput.value)
-        longBreakTime = Number(longInput.value)
+        shortBreakTime = Math.ceil(Number(shortInput.value))
+        shortInput.value = shortBreakTime
+        longBreakTime = Math.ceil(Number(longInput.value))
+        longInput.value = longBreakTime
         timeArray = [workingTime*60, shortBreakTime*60, workingTime*60, shortBreakTime*60, workingTime*60, shortBreakTime*60, workingTime*60, longBreakTime*60]
         time.textContent = workingTime+ ':00'
         x = timeArray[y]
