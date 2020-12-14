@@ -15,6 +15,14 @@
 
 <body>
     <main class="hero is-fullheight center">
+        <div class="control mb-6 is-flex mr-6">
+            <label class="has-text-weight-bold is-size-6 has-text-light is-align-self-flex-start ml-6 mt-6" for="timeWorking">Set your working time (in mn)</label>
+            <input class="is-align-self-flex-start ml-6 mt-6" id="timeWorking" value="25" type="number">
+            <label class="has-text-weight-bold is-size-6 has-text-light is-align-self-flex-start ml-6 mt-6" for="timeShortBreak">Set your short break time (in mn)</label>
+            <input class="is-align-self-flex-start ml-6 mt-6" id="timeShortBreak" value="5" type="number">
+            <label class="has-text-weight-bold is-size-6 has-text-light is-align-self-flex-start ml-6 mt-6" for="timeLongBreak">Set your long break time (in mn)</label>
+            <input class="is-align-self-flex-start ml-6 mt-6" id="timeLongBreak" value="15" type="number">
+        </div>
         <div class="notification center is-flex-direction-column is-justify-content-space-around">
             <!-- <div class="buttons">
                 <button id="pomodoro" class="button has-text-weight-bold is-size-4 px-6 py-5 mx-3 is-danger is-light timers">Pomodoro</button>
@@ -32,7 +40,7 @@
         </div>
         <footer>
             <p>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel
-                perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+                    perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
         </footer>
     </main>
     <script src="script.js"></script>
