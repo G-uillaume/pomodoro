@@ -48,7 +48,7 @@ const timer = () => {
         }
         time.textContent = minutes + ':' + seconds
     
-        interval = setTimeout(timer, 1000)
+        interval = setTimeout(timer, 10)
 }
 
 
