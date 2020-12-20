@@ -11,7 +11,7 @@ let inputs = [workInput, shortInput, longInput]
 let workingTime = Number(workInput.value)
 let shortBreakTime = Number(shortInput.value)
 let longBreakTime = Number(longInput.value)
-let timeArray = [workingTime*60, shortBreakTime*60, workingTime*60, shortBreakTime*60, workingTime*60, shortBreakTime*60, workingTime*60, longBreakTime*60]
+let timeArray = [workingTime * 60, shortBreakTime * 60, workingTime * 60, shortBreakTime * 60, workingTime * 60, shortBreakTime * 60, workingTime * 60, longBreakTime * 60]
 let interval
 let y = 0
 let x = timeArray[y]
@@ -26,8 +26,8 @@ for (let input of inputs) {
         shortInput.value = shortBreakTime
         longBreakTime = Math.ceil(Number(longInput.value))
         longInput.value = longBreakTime
-        timeArray = [workingTime*60, shortBreakTime*60, workingTime*60, shortBreakTime*60, workingTime*60, shortBreakTime*60, workingTime*60, longBreakTime*60]
-        time.textContent = workingTime+ ':00'
+        timeArray = [workingTime * 60, shortBreakTime * 60, workingTime * 60, shortBreakTime * 60, workingTime * 60, shortBreakTime * 60, workingTime * 60, longBreakTime * 60]
+        time.textContent = `${workingTime}:00`
         x = timeArray[y]
     })
 }
@@ -37,40 +37,38 @@ let bisou = new Audio('bisou.mp3')
 let doIt = new Audio('doIT.mp3')
 let salutAToi = new Audio('salutAToi.mp3')
 let audioArr = [salutAToi, bisou, doIt, bisou, doIt, bisou, doIt, bisou]
-
 const timer = () => {
     console.log(timeArray[y])
     if (x === timeArray[y]) {
         audioArr[y].play()
     }
-        x--
-        let minutes = Math.floor(x/60)
-        if (minutes < 10) {
-            minutes = '0' + minutes
+    x--
+    let minutes = Math.floor(x / 60)
+    if (minutes < 10) {
+        minutes = '0' + minutes
+    }
+    let seconds = Math.floor(x - (minutes * 60))
+    if (seconds < 10) {
+        seconds = '0' + seconds
+    }
+    if (x === 0) {
+        y++
+        if (y >= timeArray.length) {
+            y = 0
         }
-        let seconds = Math.floor(x - (minutes*60))
-        if (seconds < 10) {
-            seconds = '0' + seconds
-        }
-        if (x === 0) {
-            y++
-            if (y >= timeArray.length) {
-                y = 0
-            }
-            x = timeArray[y]
-        }
-        if (y === 0 || y === 2 || y === 4 || y === 6) {
-            work.textContent = 'Time to work !'
-        
-        }
-        else if (y === 1 || y === 3 || y === 5) {
-            work.textContent = 'Time for a short break !'
-        } else {
-            work.textContent = 'Time for a long break !'
-        }
-        time.textContent = minutes + ':' + seconds
-    
-        interval = setTimeout(timer, 1000)
+        x = timeArray[y]
+    }
+    if (y === 0 || y === 2 || y === 4 || y === 6) {
+        work.textContent = 'Time to work !'
+
+    } else if (y === 1 || y === 3 || y === 5) {
+        work.textContent = 'Time for a short break !'
+    } else {
+        work.textContent = 'Time for a long break !'
+    }
+    time.textContent = `${minutes}:${seconds}`
+
+    interval = setTimeout(timer, 100)
 }
 
 
